@@ -44,7 +44,7 @@ fi
 
 # Download the binary
 echo "Downloading binary from $BINARY_URL..."
-curl -o "$BINARY_DESTINATION" "$BINARY_URL" || wget -O "$BINARY_DESTINATION" "$BINARY_URL"
+wget -O "$BINARY_DESTINATION" "$BINARY_URL"
 chmod +x "$BINARY_DESTINATION"
 
 # Create the systemd service file
