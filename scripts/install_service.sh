@@ -26,7 +26,7 @@ CHECK_INTERVAL=${CHECK_INTERVAL:-$DEFAULT_CHECK_INTERVAL}
 
 read -p "Input the api key: " API_KEY
 
-read -p "Input the api key: " EMAIL
+read -p "Input the email: " EMAIL
 
 DEFAULT_FILE_PATH="/var/lib/dnsupdater"
 read -p "Input the directory that contains dnsupdater data [$DEFAULT_FILE_PATH]" FILE_PATH
