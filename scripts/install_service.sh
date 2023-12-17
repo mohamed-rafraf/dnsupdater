@@ -32,15 +32,17 @@ DEFAULT_FILE_PATH="/var/lib/dnsupdater"
 read -p "Input the directory that contains dnsupdater data [$DEFAULT_FILE_PATH]" FILE_PATH
 FILE_PATH=${FILE_PATH:-$DEFAULT_FILE_PATH}
 
-FILE_PATH=$FILE_PATH/ip.dat
 
-echo $FILE_PATH
 
 # Check if the script is running as root
 if [ "$(id -u)" -ne 0 ]; then
     echo "This script must be run as root."
     exit 1
 fi
+
+mkdir -p $FILE_PATH
+
+FILE_PATH=$FILE_PATH/ip.dat
 
 # Download the binary
 echo "Downloading binary from $BINARY_URL..."
